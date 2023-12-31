@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.S. Marshals - Command Structure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #fff; /* Białe tło strony */
+            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+        }
+
+        header {
+            height: 100vh;
+            background-image: url('https://cdn.discordapp.com/attachments/743755462217957466/1186419512359276634/usmstlo1.png?ex=65932e46&is=6580b946&hm=cf9dcaff51239249d146b8aadd890133afb201e710a928404ebc00a179255ac9&'); /* Tło nagłówka */
+            background-size: cover;
+            background-attachment: fixed; /* Efekt parallax dla nagłówka */
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px; /* Dodany margines */
+            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1em;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 1em;
+            text-align: center;
+            margin-top: -50px; /* Przesunięcie nawigacji do góry */
+            position: relative;
+            z-index: 2; /* Ustawienie wyższego indeksu warstwy, aby być nad sekcją */
+            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+            font-size: 1.5em; /* Zwiększenie rozmiaru fontu */
+        }
+
+        .leadership-section {
+            background-color: #eee; /* Kolor tła sekcji z hierarchią dowodzenia */
+            padding: 2em;
+            text-align: center;
+            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+        }
+
+        .leadership-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .leadership-info h2 {
+            color: #FFA000; /* Kolor niebieski */
+        }
+
+        .leadership-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .leadership-info li {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .leadership-info .higher-rank {
+            font-weight: bold;
+            font-size: 1.8em;
+            color: #f00; /* Kolor czerwony dla wyższych stopni */
+        }
+
+        .leadership-info .deputy {
+            margin-left: 20px;
+            color: #00f; /* Kolor niebieski dla stopni Deputy */
+        }
+
+        .leadership-info .supervisor {
+            margin-left: 40px;
+            color: #0c0; /* Kolor zielony dla stopni Supervisor */
+        }
+
+        .leadership-info h3 {
+            margin-top: 1.5em;
+			color: #FF0000;
+        }
+
+        .leadership-info h3,
+        .leadership-info li {
+            margin-left: 20px;
+            color: #444; /* Kolor dla pozycji w sekcjach */
+			font-size: 35px;
+        }
+
+        .leadership-info .higher-rank {
+            color: #4c4c4c; /* Kolor dla wyższych stopni */
+        }
+
+        .leadership-info .command {
+            color: #FFA000; /* Kolor czerwony dla tekstu Command Structure */
+			font-size: 45px;
+        }
+
+        footer {
+            background-color: #333; /* Kolor tła stopki */
+            color: white;
+            text-align: center;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+        }
+
+        .emergency-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .emergency-section img {
+            max-width: 50px;
+            height: auto;
+            margin-right: 0.5em;
+        }
+
+        .right-side-text {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://cdn.discordapp.com/attachments/743755462217957466/1186419744270717098/usmslogo.png?ex=65932e7d&is=6580b97d&hm=0e122b656632b165373174d7851b17d61886d08402ad4d998e3fe7644136ffe3&" alt="U.S. Marshals Logo">
+        <h1>U.S. Marshals</h1>
+        <p>Securing Tomorrow, Upholding Today, Serving Always.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="staff.html">Staff</a>
+        <a href="#">Fugitives</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="leadership-section">
+        <div class="leadership-info">
+            <h2 class="command">U.S. Marshals Structure</h2>
+            
+            <h3>Command of U.S. Marshals Service</h3>
+            <ul>
+                <li class="higher-rank">Director of U.S. Marshals Service</li>
+                <li class="higher-rank">U.S. Marshals Deputy Director</li>
+                <li class="higher-rank">U.S. Marshals Assistant Director</li>
+            </ul>
+
+            <h3>Supervisory Positions</h3>
+            <ul>
+                <li class="supervisor">U.S. Marshals Staff Supervisor</li>
+                <li class="supervisor">U.S. Marshals Senior Supervisor</li>
+                <li class="supervisor">U.S. Marshals Supervisor</li>
+                <li class="supervisor">U.S. Marshals Deputy Supervisor</li>
+                <li class="supervisor">U.S. Marshals Probie Supervisor</li>
+            </ul>
+
+            <h3>Deputy Positions</h3>
+            <ul>
+                <li class="deputy">U.S. Marshals Staff Deputy</li>
+                <li class="deputy">U.S. Marshals Senior Deputy</li>
+                <li class="deputy">U.S. Marshals Deputy</li>
+                <li class="deputy">U.S. Marshals Probie Deputy</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="disclaimer-section">
+            <!-- Pusty blok dla usuniętego napisu -->
+        </div>
+        <p>&copy; 2023 U.S. Marshals. All rights reserved.</p>
+        <div class="emergency-section">
+            <img src="https://cdn.discordapp.com/attachments/743755462217957466/1186419762989907998/911.png?ex=65932e82&is=6580b982&hm=e503e245614aea6b34ef760efa8bdaba7846b797cfc4e0306e5c3bd6c08a51c3&" alt="Emergency 911 Image">
+            <p>In Emergency Call 911</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

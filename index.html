@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.S. Marshals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #fff; /* Białe tło strony */
+            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+        }
+
+        header {
+            height: 100vh;
+            background-image: url('https://cdn.discordapp.com/attachments/743755462217957466/1186419512359276634/usmstlo1.png?ex=65932e46&is=6580b946&hm=cf9dcaff51239249d146b8aadd890133afb201e710a928404ebc00a179255ac9&'); /* Tło nagłówka */
+            background-size: cover;
+            background-attachment: fixed; /* Efekt parallax dla nagłówka */
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px; /* Dodany margines */
+            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1em;
+        }
+
+        header h1 {
+            font-size: 3em; /* Zwiększenie rozmiaru fontu dla napisu */
+            margin-bottom: 0.5em; /* Mniejszy margines na dole napisu */
+        }
+
+        header p {
+            font-size: 1.5em; /* Zwiększenie rozmiaru fontu dla motto */
+            margin-top: 0; /* Usunięcie górnego marginesu dla motto */
+        }
+
+        header .official-statement {
+            font-size: 1.2em; /* Rozmiar fontu dla oficjalnego oświadczenia */
+            margin-top: 10px; /* Dodatkowy margines na górze */
+        }
+
+        nav {
+            background-color: #555;
+            padding: 1em;
+            text-align: center;
+            margin-top: -50px; /* Przesunięcie nawigacji do góry */
+            position: relative;
+            z-index: 2; /* Ustawienie wyższego indeksu warstwy, aby być nad sekcją */
+            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+            font-size: 1.5em; /* Zwiększenie rozmiaru fontu */
+        }
+
+        section {
+            color: white;
+            text-align: center;
+            padding: 2em;
+            margin-top: -50vh; /* Przesunięcie sekcji do góry o połowę widoku okna */
+            position: relative;
+            z-index: -1; /* Ustawienie niższego indeksu warstwy, aby poruszać się pod treścią nagłówka */
+            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 1em;
+            position: relative;
+        }
+
+        .info-box {
+            position: absolute;
+            bottom: 20%;
+            left: 0;
+            background-color: rgba(34, 48, 77, 0.8); /* Kolor okna z informacjami z przeźroczystością */
+            color: white;
+            padding: 4em;
+            width: 30%;
+            opacity: 0;
+            transition: opacity 0.5s; /* Dodany efekt płynnego przejścia */
+        }
+
+        .info-box h3 {
+            margin-top: 0;
+            font-family: 'Georgia', serif; /* Zmiana czcionki na bardziej poważną */
+            font-size: 2em; /* Zwiększenie rozmiaru czcionki */
+            color: #347deb; /* Kolor niebieski do oznaczenia USMS */
+        }
+
+        .info-box p {
+            font-size: 1.2em;
+            color: white; /* Biały kolor tekstu */
+        }
+
+        .info-box h4 {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #347deb; /* Kolor niebieski do oznaczenia USMS */
+        }
+
+        .news-section {
+            background-color: #fff; /* Kolor tła sekcji z aktualnościami */
+            padding: 2em;
+            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+        }
+
+        .news-item {
+            margin-bottom: 2em;
+            padding: 1em;
+            border: 1px solid #ddd; /* Ramka wokół każdego newsa */
+            border-radius: 4px;
+        }
+
+        .news-item h3 {
+            color: #347deb; /* Kolor niebieski do oznaczenia tytułu newsa */
+        }
+
+        footer {
+            background-color: #333; /* Kolor tła stopki */
+            color: white;
+            text-align: center;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+        }
+
+        .emergency-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .emergency-section img {
+            max-width: 50px;
+            height: auto;
+            margin-right: 0.5em;
+        }
+
+        .emergency-section p {
+            color: #f00; /* Kolor czerwony dla napisu */
+            margin: 0; /* Usunięcie marginesu od góry */
+        }
+
+        .copyright-section {
+            flex: 1;
+            text-align: center;
+            opacity: 0; /* Początkowe ustawienie niewidoczności */
+            transition: opacity 0.5s; /* Dodany efekt płynnego przejścia */
+        }
+
+        .right-side-text {
+            text-align: right;
+        }
+		
+        .news-content {
+            display: flex;
+            align-items: center; /* Zawsze umieszczamy tekst na środku wysokości komórki */
+            justify-content: space-between; /* Rozstawiamy elementy po obu stronach komórki */
+        }
+
+        .news-image {
+            max-width: 300px; /* Ustawiamy maksymalną szerokość obrazka */
+            margin-left: 20px; /* Dodajemy odstęp od tekstu */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://cdn.discordapp.com/attachments/743755462217957466/1186419744270717098/usmslogo.png?ex=65932e7d&is=6580b97d&hm=0e122b656632b165373174d7851b17d61886d08402ad4d998e3fe7644136ffe3&" alt="U.S. Marshals Logo">
+        <h1>U.S. Marshals</h1>
+        <p>Securing Tomorrow, Upholding Today, Serving Always.</p>
+        <p class="official-statement">Official Government Website of the United States Marshals Service, Aligned with the Department of Justice.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="staff.html">Staff</a>
+        <a href="#">Fugitives</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Welcome to the U.S. Marshals Website</h2>
+        <img src="https://cdn.discordapp.com/attachments/743755462217957466/1186419711139917824/usmstlo2.png?ex=65932e75&is=6580b975&hm=3472b9da6014b3adabdb2619a8fb950e440e9ba9afc9bf679c16b426974ac698&" alt="U.S. Marshals Photo 2" id="usms-photo">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit....</p>
+        <div class="info-box" id="usms-info">
+            <h3>About Us:</h3>
+            <p>United States Marshals Service (USMS) to jednostka w San Andreas State Police. USMS służy jako ramię wykonawcze sądów federalnych Stanów Zjednoczonych w celu zapewnienia skutecznego działania wymiaru sprawiedliwości i integralności Konstytucji. Jest to najstarszy amerykański federalny organ ścigania. federalnym organem ścigania, utworzonym na mocy Judiciary Act z 1789 r. za prezydentury George’a Washingtona jako "United States Marshals Service" USMS w obecnym kształcie został powołany w 1969 r. w celu zapewnienia wytycznych i pomocy Marshalom Stanów Zjednoczonych we wszystkich federalnych okręgach sądowych.</p>
+        </div>
+    </section>
+
+    <div class="news-section">
+        <div class="news-item">
+            <h3>Jadymy</h3>
+            <div class="news-content">
+                <p>USMS TOPKA B)</p>
+                <img src="https://cdn.discordapp.com/attachments/743755462217957466/1186419697588129882/usmstlo3.png?ex=65932e72&is=6580b972&hm=742088290f31f0d2c94d74412c26dc50b0ce315d598246c17bda7687ef2879a8&" alt="News 1 Image" class="news-image">
+            </div>
+        </div>
+        <div class="news-item">
+            <h3>Test 2</h3>
+            <p>Test 2</p>
+        </div>
+        <div class="news-item">
+            <h3>Test 3/h3>
+            <p>Test 3</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="disclaimer-section">
+            <!-- Pusty blok dla usuniętego napisu -->
+        </div>
+        <div class="copyright-section" id="copyright">
+            <p>&copy; 2023 U.S. Marshals. All rights reserved.</p>
+        </div>
+        <div class="emergency-section">
+            <img src="https://cdn.discordapp.com/attachments/743755462217957466/1186419762989907998/911.png?ex=65932e82&is=6580b982&hm=e503e245614aea6b34ef760efa8bdaba7846b797cfc4e0306e5c3bd6c08a51c3&" alt="Emergency 911 Image">
+            <p>In Emergency Call 911</p>
+        </div>
+    </footer>
+
+    <script>
+        // Płynne pojawianie się napisu z lewej strony przy scrollowaniu
+        window.addEventListener('scroll', function () {
+            var infoBox = document.getElementById('usms-info');
+            var copyright = document.getElementById('copyright');
+            var distanceFromTop = infoBox.getBoundingClientRect().top;
+
+            if (distanceFromTop - window.innerHeight < 0) {
+                infoBox.style.opacity = '1';
+            }
+
+            // Płynne pojawianie się copyrightu po zescrollowaniu 20% obrazka
+            var usmsPhoto = document.getElementById('usms-photo');
+            var distanceFromTopPhoto = usmsPhoto.getBoundingClientRect().top;
+
+            if (distanceFromTopPhoto - window.innerHeight * 0.2 < 0) {
+                copyright.style.opacity = '1';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
