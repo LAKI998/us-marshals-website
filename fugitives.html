@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.S. Marshals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #fff;
+            transition: background-color 0.5s;
+        }
+
+        header {
+            height: 100vh;
+            background-image: url('https://cdn.discordapp.com/attachments/743755462217957466/1186419512359276634/usmstlo1.png?ex=65932e46&is=6580b946&hm=cf9dcaff51239249d146b8aadd890133afb201e710a928404ebc00a179255ac9&');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            transition: background-color 0.5s;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1em;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 1em;
+            text-align: center;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+            transition: background-color 0.5s;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+            font-size: 1.5em;
+        }
+
+        .leadership-section {
+            background-color: #eee;
+            padding: 2em;
+            text-align: center;
+            transition: background-color 0.5s;
+        }
+
+        .leadership-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .leadership-info h2 {
+            color: #FFA000;
+        }
+
+        .leadership-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .leadership-info li {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .leadership-info .higher-rank {
+            font-weight: bold;
+            font-size: 1.8em;
+            color: #f00;
+        }
+
+        .leadership-info .deputy {
+            margin-left: 20px;
+            color: #00f;
+        }
+
+        .leadership-info .supervisor {
+            margin-left: 40px;
+            color: #0c0;
+        }
+
+        .leadership-info h3 {
+            margin-top: 1.5em;
+            color: #FF0000;
+        }
+
+        .leadership-info h3,
+        .leadership-info li {
+            margin-left: 20px;
+            color: #444;
+            font-size: 35px;
+        }
+
+        .leadership-info .higher-rank {
+            color: #4c4c4c;
+        }
+
+        .leadership-info .command {
+            color: #FFA000;
+            font-size: 45px;
+        }
+
+        .wanted-section {
+            background-color: #eee;
+            padding: 2em;
+            text-align: center;
+            transition: background-color 0.5s;
+        }
+
+        .wanted-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .wanted-info h2 {
+            color: #FFA000;
+        }
+
+        .wanted-info p,
+        .wanted-info ul,
+        .wanted-info img {
+            margin: 1em 0;
+        }
+
+        .wanted-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .wanted-info li {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+        }
+
+        .wanted-info h3 {
+            margin-top: 1.5em;
+            color: #FF0000;
+        }
+
+        .wanted-info h3,
+        .wanted-info p {
+            margin-left: 20px;
+            color: #444;
+            font-size: 1.2em;
+        }
+
+        .wanted-info img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.5s;
+        }
+
+        .emergency-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .emergency-section img {
+            max-width: 50px;
+            height: auto;
+            margin-right: 0.5em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://cdn.discordapp.com/attachments/743755462217957466/1186419744270717098/usmslogo.png?ex=65932e7d&is=6580b97d&hm=0e122b656632b165373174d7851b17d61886d08402ad4d998e3fe7644136ffe3&"
+            alt="U.S. Marshals Logo">
+        <h1>U.S. Marshals</h1>
+        <p>Securing Tomorrow, Upholding Today, Serving Always.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="staff.html">Staff</a>
+        <a href="#">Fugitives</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Dodany artykuł o Josefie Koki -->
+    <section class="wanted-section">
+        <div class="wanted-info">
+            <h2>Wanted - Josef Koki</h2>
+            <p>WANTED SINCE: 10.28.2023</p>
+            <p>IN: San Andreas</p>
+            <p>FOR:</p>
+            <ul>
+                <li>Posiadanie broni (klasa 1 - pistolety) bez zezwolenia 10x</li>
+                <li>Usiłowanie zabójstwa FP 10x</li>
+                <li>Ucieczka przed SASP 9x</li>
+                <li>Napad na sklep jubilerski</li>
+                <li>Napad na Bank Pacyfic</li>
+                <li>Pomoc w ucieczce</li>
+            </ul>
+
+            <h3>Details:</h3>
+            <p>DOB: 01.04.1999   Age: 24</p>
+            <p>Sex: Male   Race: ND</p>
+            <p>Height: ND   Hair: ND</p>
+            <p>Weight: ND   Eyes: ND</p>
+            <p>SSN: 888   Scars/Tattoos: ND</p>
+
+            <h3>Wanted Poster:</h3>
+            <img src="https://cdn.discordapp.com/attachments/1093609975462510703/1182695960619515954/image.png?ex=65a151f2&is=658edcf2&hm=53e677e0f7d98418f12801398ff2025e84fba379380c640011ac810d0dbba2ed&"
+                alt="Wanted Poster">
+        </div>
+    </section>
+
+    <footer>
+        <div class="disclaimer-section">
+            <!-- Pusty blok dla usuniętego napisu -->
+        </div>
+        <p>&copy; 2023 U.S. Marshals. All rights reserved.</p>
+        <div class="emergency-section">
+            <img src="https://cdn.discordapp.com/attachments/743755462217957466/1186419762989907998/911.png?ex=65932e82&is=6580b982&hm=e503e245614aea6b34ef760efa8bdaba7846b797cfc4e0306e5c3bd6c08a51c3&"
+                alt="Emergency 911 Image">
+            <p>In Emergency Call 911</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
