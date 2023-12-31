@@ -11,23 +11,23 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
-            background-color: #fff; /* Białe tło strony */
-            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+            background-color: #fff;
+            transition: background-color 0.5s;
         }
 
         header {
             height: 100vh;
-            background-image: url('https://cdn.discordapp.com/attachments/743755462217957466/1186419512359276634/usmstlo1.png?ex=65932e46&is=6580b946&hm=cf9dcaff51239249d146b8aadd890133afb201e710a928404ebc00a179255ac9&'); /* Tło nagłówka */
+            background-image: url('https://cdn.discordapp.com/attachments/743755462217957466/1186419512359276634/usmstlo1.png?ex=65932e46&is=6580b946&hm=cf9dcaff51239249d146b8aadd890133afb201e710a928404ebc00a179255ac9&');
             background-size: cover;
-            background-attachment: fixed; /* Efekt parallax dla nagłówka */
+            background-attachment: fixed;
             color: white;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px; /* Dodany margines */
-            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+            margin-bottom: 20px;
+            transition: background-color 0.5s;
         }
 
         header img {
@@ -37,45 +37,45 @@
         }
 
         header h1 {
-            font-size: 3em; /* Zwiększenie rozmiaru fontu dla napisu */
-            margin-bottom: 0.5em; /* Mniejszy margines na dole napisu */
+            font-size: 3em;
+            margin-bottom: 0.5em;
         }
 
         header p {
-            font-size: 1.5em; /* Zwiększenie rozmiaru fontu dla motto */
-            margin-top: 0; /* Usunięcie górnego marginesu dla motto */
+            font-size: 1.5em;
+            margin-top: 0;
         }
 
         header .official-statement {
-            font-size: 1.2em; /* Rozmiar fontu dla oficjalnego oświadczenia */
-            margin-top: 10px; /* Dodatkowy margines na górze */
+            font-size: 1.2em;
+            margin-top: 10px;
         }
 
         nav {
             background-color: #555;
             padding: 1em;
             text-align: center;
-            margin-top: -50px; /* Przesunięcie nawigacji do góry */
+            margin-top: -50px;
             position: relative;
-            z-index: 2; /* Ustawienie wyższego indeksu warstwy, aby być nad sekcją */
-            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+            z-index: 2;
+            transition: background-color 0.5s;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 1em;
-            font-size: 1.5em; /* Zwiększenie rozmiaru fontu */
+            font-size: 1.5em;
         }
 
         section {
             color: white;
             text-align: center;
             padding: 2em;
-            margin-top: -50vh; /* Przesunięcie sekcji do góry o połowę widoku okna */
+            margin-top: -50vh;
             position: relative;
-            z-index: -1; /* Ustawienie niższego indeksu warstwy, aby poruszać się pod treścią nagłówka */
-            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+            z-index: -1;
+            transition: background-color 0.5s;
         }
 
         section img {
@@ -91,58 +91,81 @@
             position: absolute;
             bottom: 20%;
             left: 0;
-            background-color: rgba(34, 48, 77, 0.8); /* Kolor okna z informacjami z przeźroczystością */
+            background-color: rgba(34, 48, 77, 0.8);
             color: white;
             padding: 4em;
             width: 30%;
             opacity: 0;
-            transition: opacity 0.5s; /* Dodany efekt płynnego przejścia */
+            transition: opacity 0.5s;
         }
 
         .info-box h3 {
             margin-top: 0;
-            font-family: 'Georgia', serif; /* Zmiana czcionki na bardziej poważną */
-            font-size: 2em; /* Zwiększenie rozmiaru czcionki */
-            color: #347deb; /* Kolor niebieski do oznaczenia USMS */
+            font-family: 'Georgia', serif;
+            font-size: 2em;
+            color: #347deb;
         }
 
         .info-box p {
             font-size: 1.2em;
-            color: white; /* Biały kolor tekstu */
+            color: white;
         }
 
         .info-box h4 {
             font-weight: bold;
             font-size: 1.5em;
-            color: #347deb; /* Kolor niebieski do oznaczenia USMS */
+            color: #347deb;
         }
 
         .news-section {
-            background-color: #fff; /* Kolor tła sekcji z aktualnościami */
+            background-color: #fff;
             padding: 2em;
-            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+            transition: background-color 0.5s;
         }
 
         .news-item {
             margin-bottom: 2em;
             padding: 1em;
-            border: 1px solid #ddd; /* Ramka wokół każdego newsa */
+            border: 1px solid #ddd;
             border-radius: 4px;
         }
 
         .news-item h3 {
-            color: #347deb; /* Kolor niebieski do oznaczenia tytułu newsa */
+            color: #347deb;
+        }
+
+        .news-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: Verdana, sans-serif; /* Zmiana czcionki na Verdana */
+        }
+
+        .news-content p {
+            font-size: 1.2em;
+            color: #444;
+        }
+
+        .news-content img {
+            max-width: 300px;
+            margin-left: 20px;
+        }
+
+        .read-more-link {
+            color: #FF0000;
+            cursor: pointer;
+            text-decoration: underline;
         }
 
         footer {
-            background-color: #333; /* Kolor tła stopki */
+            background-color: #333;
             color: white;
             text-align: center;
             padding: 1em;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background-color 0.5s; /* Dodany efekt płynnego przejścia dla koloru tła */
+            transition: background-color 0.5s;
         }
 
         .emergency-section {
@@ -157,32 +180,20 @@
         }
 
         .emergency-section p {
-            color: #f00; /* Kolor czerwony dla napisu */
-            margin: 0; /* Usunięcie marginesu od góry */
+            color: #f00;
+            margin: 0;
         }
 
         .copyright-section {
             flex: 1;
             text-align: center;
-            opacity: 0; /* Początkowe ustawienie niewidoczności */
-            transition: opacity 0.5s; /* Dodany efekt płynnego przejścia */
+            opacity: 0;
+            transition: opacity 0.5s;
         }
 
         .right-side-text {
             text-align: right;
         }
-		
-        .news-content {
-            display: flex;
-            align-items: center; /* Zawsze umieszczamy tekst na środku wysokości komórki */
-            justify-content: space-between; /* Rozstawiamy elementy po obu stronach komórki */
-        }
-
-        .news-image {
-            max-width: 300px; /* Ustawiamy maksymalną szerokość obrazka */
-            margin-left: 20px; /* Dodajemy odstęp od tekstu */
-        }
-
     </style>
 </head>
 
@@ -195,12 +206,12 @@
         <p class="official-statement">Official Government Website of the United States Marshals Service, Aligned with the Department of Justice.</p>
     </header>
 
-	<nav>
-	    <a href="index.html">Home</a>
-	    <a href="staff.html">Staff</a>
-	    <a href="fugitives.html">Fugitives</a>
-	    <a href="contact.html">Contact</a>
-	</nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="staff.html">Staff</a>
+        <a href="fugitives.html">Fugitives</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
     <section>
         <h2>Welcome to the U.S. Marshals Website</h2>
@@ -214,9 +225,11 @@
 
     <div class="news-section">
         <div class="news-item">
-            <h3>Jadymy</h3>
+            <h3>Wystawiony list gończy!</h3>
             <div class="news-content">
-                <p>USMS TOPKA B)</p>
+                <p>Od 2023 roku w stanie San Andreas znajduje się wysoce niebezpieczny i poszukiwany obywatel. Zwie się Josef Koki (SSN: 888)
+                    <span class="read-more-link" onclick="window.location.href='fugitives.html'">Czytaj więcej</span>
+                </p>
                 <img src="https://cdn.discordapp.com/attachments/743755462217957466/1186419697588129882/usmstlo3.png?ex=65932e72&is=6580b972&hm=742088290f31f0d2c94d74412c26dc50b0ce315d598246c17bda7687ef2879a8&" alt="News 1 Image" class="news-image">
             </div>
         </div>
@@ -236,7 +249,6 @@
     </footer>
 
     <script>
-        // Płynne pojawianie się napisu z lewej strony przy scrollowaniu
         window.addEventListener('scroll', function () {
             var infoBox = document.getElementById('usms-info');
             var copyright = document.getElementById('copyright');
@@ -246,7 +258,6 @@
                 infoBox.style.opacity = '1';
             }
 
-            // Płynne pojawianie się copyrightu po zescrollowaniu 20% obrazka
             var usmsPhoto = document.getElementById('usms-photo');
             var distanceFromTopPhoto = usmsPhoto.getBoundingClientRect().top;
 
