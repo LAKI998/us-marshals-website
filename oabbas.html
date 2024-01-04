@@ -53,12 +53,74 @@
             font-size: 1.5em;
         }
 
+        .leadership-section {
+            background-color: #eee;
+            padding: 2em;
+            text-align: center;
+            transition: background-color 0.5s;
+        }
+
+        .leadership-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .leadership-info h2 {
+            color: #FFA000;
+        }
+
+        .leadership-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .leadership-info li {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .leadership-info .higher-rank {
+            font-weight: bold;
+            font-size: 1.8em;
+            color: #f00;
+        }
+
+        .leadership-info .deputy {
+            margin-left: 20px;
+            color: #00f;
+        }
+
+        .leadership-info .supervisor {
+            margin-left: 40px;
+            color: #0c0;
+        }
+
+        .leadership-info h3 {
+            margin-top: 1.5em;
+            color: #FF0000;
+        }
+
+        .leadership-info h3,
+        .leadership-info li {
+            margin-left: 20px;
+            color: #444;
+            font-size: 35px;
+        }
+
+        .leadership-info .higher-rank {
+            color: #4c4c4c;
+        }
+
+        .leadership-info .command {
+            color: #FFA000;
+            font-size: 45px;
+        }
+
         .wanted-section {
             background-color: #eee;
             padding: 2em;
             text-align: center;
-            border: 2px solid #FFA000; /* Dodane obramowanie */
-            border-radius: 10px; /* Zaokrąglenie rogów */
             transition: background-color 0.5s;
         }
 
@@ -69,11 +131,6 @@
 
         .wanted-info h2 {
             color: #FFA000;
-            cursor: pointer;
-        }
-
-        .wanted-info h2:hover {
-            color: #FF0000;
         }
 
         .wanted-info p,
@@ -133,17 +190,6 @@
             height: auto;
             margin-right: 0.5em;
         }
-		
-		.wanted-section {
-			display: flex;
-			justify-content: space-between;
-		}
-
-		.divider {
-			width: 2px;
-			background-color: #FFA000;
-			margin: 0 20px;
-		}
     </style>
 </head>
 
@@ -156,27 +202,43 @@
         <p>Securing Tomorrow, Upholding Today, Serving Always.</p>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="staff.html">Staff</a>
-        <a href="fugitives.html">Fugitives</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+	<nav>
+	    <a href="index.html">Home</a>
+	    <a href="staff.html">Staff</a>
+	    <a href="fugitives.html">Fugitives</a>
+	    <a href="contact.html">Contact</a>
+	</nav>
 
-    <!-- Dodany artykuł o Josefie Koki -->
-	<section class="wanted-section">
-		<div class="wanted-info">
-			<h2 onclick="window.location.href='jkoki.html'">Wanted - Josef Koki</h2>
-			<p>WANTED SINCE: 10.28.2023</p>
-			<p>IN: San Andreas</p>
-		</div>
-		<div class="divider"></div> <!-- Nowy element do dodania ramki -->
-		<div class="wanted-info">
-			<h2 onclick="window.location.href='oabbas.html'">Wanted - Ömer Abbas</h2>
-			<p>WANTED SINCE: 31.12.2023</p>
-			<p>IN: San Andreas</p>
-		</div>
-	</section>
+    <section class="wanted-section">
+        <div class="wanted-info">
+            <h2>Wanted - Ömer Abbas</h2>
+            <p>WANTED SINCE: 31.12.2023</p>
+            <p>IN: San Andreas</p>
+            <p>FOR:</p>
+            <ul>
+				<li>Usiłowanie zabójstwa FP 5x</li>
+				<li>Posiadanie broni (klasa 1 - pistolety) bez zezwolenia 4x</li>
+				<li>Napad na Humane Labs</li>
+				<li>Odbicie Transportu Policyjnego (np. Konwój)</li>
+				<li>Napad na Bank Fleeca 2x</li>
+				<li>Porwanie FP/EMS</li>
+				<li>Posiadanie broni (klasa 3 - broń długa np AK-47)</li>
+				<li>Napad na Bank Pacyfic</li>
+				<li>Ucieczka przed SASP</li>
+            </ul>
+
+            <h3>Details:</h3>
+            <p>DOB: 1993-08-31   Age: 30</p>
+            <p>Sex: Male   Race: ND</p>
+            <p>Height: ND   Hair: ND</p>
+            <p>Weight: ND   Eyes: ND</p>
+            <p>SSN: 26831   Scars/Tattoos: ND</p>
+
+            <h3>Wanted Poster:</h3>
+            <img src="https://cdn.discordapp.com/attachments/1093609975462510703/1192482247396302938/image.png?ex=65a93ca3&is=6596c7a3&hm=cf9a68f643a208ca2cb762cfd8726b6dee7c8209722b3fd08af51370a960e0e7&"
+                alt="Wanted Poster">
+        </div>
+    </section>
 
     <footer>
         <div class="disclaimer-section">
